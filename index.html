@@ -1,45 +1,30 @@
-<!DOCTYPE html>
+<script disable-devtool-auto='true' src='https://cdn.jsdelivr.net/npm/disable-devtool' clear-log='true'   
+
+  disable-select='true' disable-copy='true' disable-cut='true'   
+
+  disable-paste='true'></script> 
 <html>
 <head>
-    <title>ALL IN ONE</title>
-    <meta content="noindex, nofollow, noarchive" name="robots"/>
-    <meta name="referrer" content="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="https://mhdmaxtv.com/players/jw.css">
-    <script src='https://cdn.jwplayer.com/libraries/MAaRkUjT.js'></script>
-    <script>jwplayer.key = "jTL7dlu7ybUI5NZnDdVgb1laM8/Hj3ftIJ5Vqg==";</script>
-<style>
-    body {
-      margin: 0;
-    }
+<title>ALL IN ONE</title>
+<link rel="stylesheet" type="text/css" href="./clap.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@1.0.1/dist/hlsjs-playback.min.js"></script>
 
-    .jwplayer {
-      position: absolute !important;
-    }
-
-    .jwplayer.jw-flag-aspect-mode {
-      min-height: 100%;
-      max-height: 100%;
-    }
-</style>
 </head>
 <body>
-    <div id="player" class="ViostreamIframe"></div>
-
-    <script>
-                // Use the PHP-generated JSON in the JavaScript code
-        var sources = [{"http://180.188.227.250:8095/stream/t/559/stream_0.m3u8?uid=2183433854&u=admin&p=e962118eaeb88ac4a2b5cc2c7d99877207f6303b4169ef010c744b5c12898ef4"}}}];
-
-        //JWWWWWW
-        jwplayer("player").setup({
-            playlist: [{
-                sources: sources
-            }],
-            autostart: true,
-            width: "100%",
-            height: "100%",
-           
-            cast: {},
+<div id="player" style="height: 100%; width: 100%;"></div>
+<script>
+        var player = new Clappr.Player({
+            source: 'https://eu02.dmca.run/247-skymain/tracks-v1a1/mono.m3u8',
+            width: '100%',
+            height: '100%',
+            autoPlay: true,
+            plugins: [HlsjsPlayback, LevelSelector],
+            mimeType: "application/x-mpegURL",
+            mediacontrol: { seekbar: "#ff0000", buttons: "#eee" },
+            parentId: "#player",
         });
-            </script>
+</script>
 </body>
 </html>
