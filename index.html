@@ -105,21 +105,7 @@
             }
         });
 
-        // Ensure playback compatibility for mobile devices
-        jwplayer().on('ready', function () {
-            const player = document.querySelector('#player-container');
-            if (player) {
-                player.style.height = window.innerHeight + 'px';
-            }
-        });
-
-        jwplayer().on('play', function () {
-            document.body.style.backgroundColor = "#000";
-        });
-
-        jwplayer().on('error', function (e) {
-            console.error("Playback error:", e.message);
-        });
+        
     </script>
 </body>
 
